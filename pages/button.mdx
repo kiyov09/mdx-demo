@@ -1,0 +1,95 @@
+import MdxLayout from '../components/layouts/MdxLayout';
+import Button from '../components/Button';
+
+# MDX Documentation Example
+
+This page shows how we can use React components inside a Markdown document using [MDX](https://mdxjs.com/).
+
+Also, as this page was created as part of a [NextJS](https://nextjs.org) application, you can find more information about using Markdown/MDX [here](https://nextjs.org/blog/markdown).
+
+In this example will be presentin a **Button** component that is define in *./components/Button.tsx*.
+
+## Button Component
+
+The following is a **Button** component as it's defined in the *./components/Button.tsx* file.
+
+<Button />
+
+### Text in the Button component
+
+You can define the text (value) of the button passing a **value** prop.
+
+Code:
+
+```tsx
+<Button value={'Custom Text'} />
+```
+
+Result:
+
+<Button value={'Custom Text'} />
+
+### Actions
+
+You can pass an **onClick** property as a callback to execute your own logic whenever the button is clicked.
+
+Code:
+
+```tsx
+<Button
+  value={'Click Me'}
+  onClick={() => alert('Button was clicked!')}
+  />
+```
+
+Result:
+
+<Button value={'Click Me'} onClick={() => alert('Button was clicked!')} />
+
+### Variants
+
+The **Button** component also support different style variants to fulfill different uses cases, see below:
+
+#### Default
+
+Code:
+
+```tsx
+<Button variant="default" />
+
+or
+
+<Button />
+```
+
+Result:
+
+<Button variant="default" value="Default"/>
+
+#### Primary
+
+Code:
+
+```tsx
+<Button variant="primary" />
+```
+
+Result:
+
+<Button variant="primary" value="Primary"/>
+
+#### Secondary
+
+Code:
+
+```tsx
+<Button variant="secondary" />
+```
+
+Result:
+
+<Button variant="secondary" value="Secondary"/>
+
+
+
+export default ({ children }) => <MdxLayout>{ children }</MdxLayout>
