@@ -1,8 +1,6 @@
 import { MDXProvider } from "@mdx-js/react";
 import { ReactNode, useEffect, useRef, useState } from "react";
 
-import Link from "next/link";
-
 const Link = (props: any) => (
   <a className="text-blue-500 font-semibold" {...props} />
 );
@@ -86,6 +84,7 @@ const MdxLayout = ({ children }: { children: ReactNode[] | ReactNode }) => {
           className="h-6 w-6 absolute right-8 cursor-pointer shadow-md rounded-full"
           href="https://github.com/kiyov09/mdx-demo"
           target="_blank"
+          rel="noreferrer"
         >
           <GithubIcon />
         </a>
